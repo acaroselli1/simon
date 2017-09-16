@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simon</title>
+    <style>
+        @font-face {
+
+            font-family: "Cartwheel";
+            src: "Cartwheel.otf";
+        }
+
+
+        body {
+
+            font-family: "Cartwheel";
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 75px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        table {
+            margin-top: 10vh;
+            margin-bottom:10vh;
+            border-style: outset;
+            border-collapse: collapse;
+            background: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            width: 70px;
+            height: 70px;
+            border: 30px solid black;
+            background: white;
+            border-style: outset;
+        }
+
+
+
+        #newGame {
+            /* margin-left: 18.9%;
+            margin-top: 23%; */
+            background: red;
+            font-family: "Cartwheel";
+        }
+
+        #results {
+            margin-left: 75px;
+            margin-right: 75px;
+            font-family: "Cartwheel";
+        }
+
+        #startOver {
+
+            background: darkblue;
+            font-family: "Cartwheel";
+        }
+
+        #declareWinner {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            background: white;
+        }
+
+        body {
+            background: blue;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        #toe {
+            color: white;
+        }
+
+        .darkblue {
+            background-color: darkblue;
+        }
+
+        .blue {
+            background-color: #3333FF;
+            color: navy;
+        }
+
+        .red-highlight {
+            color: white;
+        }
+
+        .white {
+
+            color: white;
+        }
+
+        .grey {
+            background-color: grey;
+        }
+
+        .yellow {
+            background-color: #FFFF00;
+        }
+
+        .darkyellow {
+
+            background-color: #CC9900;
+        }
+
+        .green {
+            background-color: #00FF00;
+        }
+
+        .darkgreen {
+
+            background-color: darkgreen;
+        }
+
+        .darkred {
+
+            background-color: darkred;
+        }
+
+        .red {
+
+            background-color: #FF0000;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+
+
+        #guesses {
+
+            text-align: center;
+            margin-top: 10vh;
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+</head>
+
+<body id="bg">
+    <h1 class="animated bounceInDown">Simon Mockup</h1>
+    <h2 class="red-highlight animated flash" id="gameOver">LET'S BEGIN!!</h2>
+    <div id="declareWinner">CAN YOU REMEMBER YOUR NEXT MOVE?</div>
+
+    <div id="guesses">
+        <button  class="guessnext" onclick="setComputerArr(), startGame()">Start Game</button>
+    </div>
+
+    <div id="gameBoard">
+        <table>
+            <tr>
+                <td onclick = "pushRedClass()" class="darkred"  id="0">0</td>
+                <td onclick = "pushBlueClass()" class="darkblue" id="1">1</td>
+
+            </tr>
+            <tr>
+                <td onclick = "pushYellowClass()" class="darkyellow" id="2">2</td>
+                <td onclick = "pushGreenClass()" class="darkgreen" id="3">3</td>
+            </tr>
+        </table>
+
+    </div>
+    <div>
+
+    </div>
+
+    
+    <script src="simon.js"></script>
+</body>
+
+</html>
